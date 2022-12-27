@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zvladneš to ?</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="./java.js" defer></script>
+
+</head>
+<body>
+<header>
+    <div>
+        <h1> Zladneš to ?</h1>
+    </div>
+</header>
+<section class="uvod" id="uvod">
+    <h2 style="color: white">Uvod</h2>
+    <div>
+        <button id="start" onclick="hlavny_cyklus_hry()"> ŠTART </button>
+    </div>
+    <div>
+        <button id="popis"> POPIS HRY </button>
+    </div>
+</section>
+<section id="popis_hry">
+    <h2>Popis hry</h2>
+    <div>
+        <div>
+            <p> Tato hra spočíva v príradený príkladu k správnemu výsledku pomocou drag and drop technologie.
+                Príklad 2 + 2 klikni a presun na vysledok 4 ak si na mobile. Pretiahni ak si na počítači </p>
+        </div>
+        <div class="popis_obrazky">
+            <img src="vysledky/vysledok1-3.png" id="priklad_vysledok"  alt="">
+            <img src="sipka.png" alt="">
+            <img src="priklady/priklad1.png" id="priklad_priklad" alt="">
+        </div>
+        <div>
+            <p> Ak je výsledok s obrazkom 4  zelený, zvládol si to </p>
+        </div>
+        <div style="height: 100px">
+            <button id="spat_popis"> Spat</button>
+        </div>
+    </div>
+</section>
+<section id="main1" >
+    <div>
+        <div>
+            <h2>Prirad spravne</h2>
+        </div>
+        <div id="hraciaplocha">
+
+        </div>
+        <div id="hraciaplocha_spodok">
+        </div>
+        <div id="hraciaplocha_spodok_pomoc">
+            <p> Teraz pretiahny / klikni na vysledok vyššie ktorý chceš vybrať</p>
+        </div>
+        <div id="uplnyspodok">
+            <div >
+                <p id="level">Level: 0</p>
+            </div>
+            <div>
+                <button id="spat"> Spat </button>
+            </div>
+            <div >
+                <p id="zivot">Zivot: 3 </p>
+            </div>
+            <div>
+                <button id="napoveda"> Riešenie </button>
+            </div>
+            <div id="riesenie">
+
+            </div>
+        </div>
+    </div>
+</section>
+    <div id="ukoncenie">
+        <div>
+            <p id="ukoncenie_text">Prehral si</p>
+        </div>
+        <div>
+            <button id="znovu">Znovu</button>
+        </div>
+    </div>
+</body>
+</html>
