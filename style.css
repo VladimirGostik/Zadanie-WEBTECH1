@@ -110,12 +110,7 @@ header > div {
     max-width: 80%;
 
 }
-#hraciaplocha_spodok  > img:hover {
 
-}
-#hraciaplocha_spodok  > img.active {
-
-}
 #hraciaplocha_spodok_pomoc {
     display: none;
     position: absolute;
