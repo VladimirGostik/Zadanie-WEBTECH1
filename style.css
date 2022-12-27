@@ -1,22 +1,38 @@
-body {
-    background-color: #F78E69;
 
+@font-face {
+    font-family: 'custom_font';
+    src: url(Poppins/Poppins-Light.ttf);
+} 
+
+h1{
+    color: white;
+    font-size: 3.5rem;    
 }
+
+h2{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+
 header {
-    top: 0;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    background-color: #F7EF99;
+    font-family: 'custom_font';
+    min-width: 300px;
+    margin: auto;
+    position: relative;
+    display: block;
+    width: 95%;
+    border-radius: 30px;
+    background-color: rgb(129, 72, 3);
 }
 header > div {
     display: flex;
     justify-content: center;
 }
 #main1, #popis_hry  {
-    position: absolute;
-    top: 15%;
-    right:10%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
     background-color: #F1BB87;
     display: none;
     width: 80%;
@@ -24,6 +40,7 @@ header > div {
     align-items: center;
     flex-direction: column;
 }
+
 #main1 > div {
     display: flex;
     flex-direction: column;
@@ -88,17 +105,17 @@ header > div {
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: rgb(185, 145, 97);
     border: none;
     border-radius: 10px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 7px rgb(241, 216, 186);
 }
 
-#start:hover, #popis:hover, #spat:hover, #spat_popis , #znovu, #napoveda {background-color: #3e8e41}
+#start:hover, #popis:hover, #spat:hover, #spat_popis , #znovu, #napoveda {background-color:rgb(153, 89, 10)}
 
 #start:active, #popis:active, #spat:active ,#spat_popis , #znovu {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
+    background-color: rgb(185, 145, 97);
+    box-shadow: 0 5px rgb(241, 216, 186);
     transform: translateY(4px);
 }
 #hraciaplocha_spodok {
@@ -114,8 +131,8 @@ header > div {
 #hraciaplocha_spodok_pomoc {
     display: none;
     position: absolute;
-    background-color: #30263d;
-    color: white;
+    background-color: rgba(255, 201, 136, 0.544);
+    color: rgb(0, 0, 0);
 }
 #hraciaplocha {
     width: 100%;
@@ -163,11 +180,9 @@ header > div {
     justify-content: center;
 }
 body {
-    background-color: #30263d;
-    font-family: -apple-system, Helvetica Neue, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Open Sans, sans-serif;
-    text-transform: uppercase;
-    display: flex;
+    font-family: 'custom_font';
+    background-color: rgba(255, 201, 136, 0.544);
+    display: block;
     justify-content: center;
     align-items: center;
 }
