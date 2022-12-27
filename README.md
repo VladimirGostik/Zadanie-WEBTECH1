@@ -9,3 +9,4 @@
 7. Urobit responzivitu pre mobil
 8. prekopat kod ak su tam chyby.
 9. Upraviť finálny modul a názov hry
+10. ....
