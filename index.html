@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Zvladneš to ?</title>
+    <title>Zábavná matematika</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
@@ -13,24 +13,24 @@
 <body>
 <header>
     <div>
-        <h1> Zladneš to ?</h1>
+        <h1> Zábavná matematika</h1>
     </div>
 </header>
 <section class="uvod" id="uvod">
-    <h2 style="color: white">Uvod</h2>
+    <h2>Pre začiatok stlačte tlačidlo ŠTART!!</h2>
     <div>
         <button id="start" onclick="hlavny_cyklus_hry()"> ŠTART </button>
     </div>
     <div>
-        <button id="popis"> POPIS HRY </button>
+        <button id="popis"> Popis hry </button>
     </div>
 </section>
 <section id="popis_hry">
     <h2>Popis hry</h2>
     <div>
         <div>
-            <p> Tato hra spočíva v príradený príkladu k správnemu výsledku pomocou drag and drop technologie.
-                Príklad 2 + 2 klikni a presun na vysledok 4 ak si na mobile. Pretiahni ak si na počítači </p>
+            <p> Táto hra spočíva v príradený príkladu k správnemu výsledku pomocou drag and drop technologie.
+                Príklad 2 + 2 klikni a presun príklad na vysledok 4 na počítači</p>
         </div>
         <div class="popis_obrazky">
             <img src="vysledky/vysledok1-3.png" id="priklad_vysledok"  alt="">
@@ -38,11 +38,29 @@
             <img src="priklady/priklad1.png" id="priklad_priklad" alt="">
         </div>
         <div>
-            <p> Ak je výsledok s obrazkom 4  zelený, zvládol si to </p>
+            <p> Ak je výsledok s obrazkom 4 zelený, zvládol si to úspešne!</p>
         </div>
+        <div class="spravna_odpoved">
+            <img src="vysledky/example.png" id="spravna_odpoved_obrazok" alt="">
+        </div>
+
+        <div>
+            <p> Ak je výsledok s obrazkom 9 červený, nezvládol si to úspešne a musíš pokus zopakovať, ale odčíta sa ti život! </p>
+        </div>
+
+        <div class="nespravna_odpoved">
+            <img src="vysledky/wrong answer.png" id="nespravna_odpoved_obrazok" alt="">
+        </div>
+
+        <div>
+            <p> V prípade ak ovládaš túto hru pomocou mobilného telefónu. Príklad 2 + 2 klikni a presun na vysledok 4! </p>
+        </div>
+
+
         <div style="height: 100px">
-            <button id="spat_popis"> Spat</button>
+            <button id="spat_popis"> Späť</button>
         </div>
+
     </div>
 </section>
 <section id="main1" >
@@ -63,10 +81,10 @@
                 <p id="level">Level: 0</p>
             </div>
             <div>
-                <button id="spat"> Spat </button>
+                <button id="spat"> Späť </button>
             </div>
             <div >
-                <p id="zivot">Zivot: 3 </p>
+                <p id="zivot">Život: 3 </p>
             </div>
             <div>
                 <button id="napoveda"> Riešenie </button>
