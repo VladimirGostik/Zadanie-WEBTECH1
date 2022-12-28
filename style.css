@@ -79,7 +79,7 @@ header > div {
 .uvod > div {
     padding: 15px;
 }
-#start, #popis , #spat , #spat_popis , #znovu, #napoveda {
+#start, #popis , #spat , #spat_popis , #znovu, #napoveda, #easy ,#medium, #hard {
     display: inline-block;
     padding: 10px 20px;
     font-size: 15px;
@@ -176,4 +176,33 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/****************************************************************************************************************************************************************************************************************************/
+/****************************************************************************************************************************************************************************************************************************/
+/****************************************************************************************************************************************************************************************************************************/
+#easy:hover{
+    
+    background-color: #3e8e41
+}
+#medium{
+    display: none;
+    background-color: #d1e800;
+}
+#medium:hover{
+    background-color: #94a400;
+}
+ #hard {
+    display: none;
+    background-color: #ff9704;
+}
+#hard:hover{
+    background-color: #b86c01; 
+}
+
+#easy:active, #medium:active, #hard:active {
+
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 

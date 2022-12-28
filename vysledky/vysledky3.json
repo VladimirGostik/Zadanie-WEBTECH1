@@ -1,0 +1,142 @@
+{
+  "0": [
+    {
+      "src": "vysledok1-1.png",
+      "value": "8"
+    },
+    {
+      "src": "vysledok1-2.png",
+      "value": "2"
+    },
+    {
+      "src": "vysledok1-3.png",
+      "value": "4"
+    }
+  ],
+  "1": [
+    {
+      "src": "vysledok2-1.png",
+      "value": "71"
+    },
+    {
+      "src": "vysledok2-2.png",
+      "value": "17"
+    },
+    {
+      "src": "vysledok2-3.png",
+      "value": "28"
+    }
+  ],
+  "2": [
+    {
+      "src": "vysledok3-1.png",
+      "value": "275"
+    },
+    {
+      "src": "vysledok3-2.png",
+      "value": "15"
+    },
+    {
+      "src": "vysledok3-3.png",
+      "value": "24"
+    }
+  ],
+  "3": [
+    {
+      "src": "vysledok4-1.png",
+      "value": "0"
+    },
+    {
+      "src": "vysledok4-2.png",
+      "value": "24"
+    },
+    {
+      "src": "vysledok4-3.png",
+      "value": "0"
+    }
+  ],
+  "4": [
+    {
+      "src": "vysledok5-1.png",
+      "value": "0"
+    },
+    {
+      "src": "vysledok5-2.png",
+      "value": "0"
+    },
+    {
+      "src": "vysledok5-3.png",
+      "value": "3"
+    }
+  ],
+  "5": [
+    {
+      "src": "vysledok6-1.png",
+      "value": "0"
+    },
+    {
+      "src": "vysledok6-2.png",
+      "value": "12"
+    },
+    {
+      "src": "vysledok6-3.png",
+      "value": "0"
+    }
+  ],
+  "6": [
+    {
+      "src": "vysledok7-1.png",
+      "value": "23"
+    },
+    {
+      "src": "vysledok7-2.png",
+      "value": "0"
+    },
+    {
+      "src": "vysledok7-3.png",
+      "value": "0"
+    }
+  ],
+  "7": [
+    {
+      "src": "vysledok8-1.png",
+      "value": "0"
+    },
+    {
+      "src": "vysledok8-2.png",
+      "value": "9"
+    },
+    {
+      "src": "vysledok8-3.png",
+      "value": "0"
+    }
+  ],
+  "8": [
+    {
+      "src": "vysledok9-1.png",
+      "value": "0"
+    },
+    {
+      "src": "vysledok9-2.png",
+      "value": "87"
+    },
+    {
+      "src": "vysledok9-3.png",
+      "value": "0"
+    }
+  ],
+  "9": [
+    {
+      "src": "vysledok10-1.png",
+      "value": "0"
+    },
+    {
+      "src": "vysledok10-2.png",
+      "value": "0"
+    },
+    {
+      "src": "vysledok10-3.png",
+      "value": "9"
+    }
+  ]
+}
