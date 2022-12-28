@@ -2,62 +2,62 @@
   "0": [
     {
       "src": "priklad1.png",
-      "value": "4"
+      "value": "3"
     }
   ],
 
   "1": [
     {
       "src": "priklad2.png",
-      "value": "17"
+      "value": "1/2"
     }
   ],
   "2": [
     {
       "src": "priklad3.png",
-      "value": "275"
+      "value": "12/25"
     }
   ],
   "3": [
     {
       "src": "priklad4.png",
-      "value": "24"
+      "value": "10"
     }
   ],
   "4": [
     {
       "src": "priklad5.png",
-      "value": "3"
+      "value": "2"
     }
   ],
   "5": [
     {
       "src": "priklad6.png",
-      "value": "12"
+      "value": "2"
     }
   ],
   "6": [
     {
       "src": "priklad7.png",
-      "value": "23"
+      "value": "-4"
     }
   ],
   "7": [
     {
       "src": "priklad8.png",
-      "value": "9"
+      "value": "8"
     }
   ],
   "8": [
     {
       "src": "priklad9.png",
-      "value": "87"
+      "value": "2"
     }
   ],
   "9": [
     {
       "src": "priklad10.png",
-      "value": "9"
+      "value": "32"
     }
   ]
 

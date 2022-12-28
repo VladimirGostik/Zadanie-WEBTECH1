@@ -29,9 +29,12 @@ let vysledok_riesenia
 
 /****************************************************************************************************************************************************************************************************************************/
 
-var diffLevel = 0;
-var priklady = ["./priklady/priklady1.json", "./priklady/priklady2.json", "./priklady/priklady3.json",];
-var vysledky = ["./vysledky/vysledky1.json", "./vysledky/vysledky2.json", "./vysledky/vysledky3.json"];
+//var diffLevel = 0;
+//var priklady = ["./priklady/priklady1.json", "./priklady/priklady2.json", "./priklady/priklady3.json",];
+//var vysledky = ["./vysledky/vysledky1.json", "./vysledky/vysledky2.json", "./vysledky/vysledky3.json"];
+
+var priklady = "./priklady/priklady2.json";
+var vysledky = "./vysledky/vysledky2.json";
 
 /****************************************************************************************************************************************************************************************************************************/
 /* EASY   MEDIUM   HARD TLACIDLO
@@ -84,7 +87,7 @@ selectedItem3.onclick = function () {
 /****************************************************************************************************************************************************************************************************************************/
 
 
-fetch(priklady[diffLevel])
+fetch(priklady/*[diffLevel]*/)
     .then(response => response.json())
     .then(json => {
         mojjson = (Object.keys(json).length)
@@ -108,14 +111,14 @@ function myFunc() {
     }
 }
 spravne_riesenie.addEventListener("click", function () {
-    fetch(priklady[diffLevel])
+    fetch(priklady/*[diffLevel]*/)
         .then(res => res.json())
         .then(data => {
             data[cyklus[ktory]].forEach(image => {
                 vysledok_riesenia = image.value;
             })
         })
-    fetch(vysledky[diffLevel])
+    fetch(vysledky/*[diffLevel]*/)
         .then(res => res.json())
         .then(data => {
             data[cyklus[ktory]].forEach(image => {
@@ -174,18 +177,18 @@ function ktory_level(level) {
         zivot.innerText = "Zivot:" + pocet_zivotou;
     }
     else {
-        fetch(vysledky[diffLevel])
+        fetch(vysledky/*[diffLevel]*/)
             .then(res => res.json())
             .then(data => {
                 data[level]
                     .forEach(addimages)
             })
-        fetch(priklady[diffLevel])
+        fetch(priklady/*[diffLevel]*/)
             .then(res => res.json())
             .then(data => {
                 data[level].forEach(image => {
                     const img = document.createElement("img");
-                    img.src = './priklady/priklady1/' + image.src;
+                    img.src = './priklady/priklady2/' + image.src;
                     img.value = image.value;
                     img.addEventListener("dragend", (event) => {
                         if (hoverOverElement === event.target.value) {
@@ -250,7 +253,7 @@ function ktory_level(level) {
 
 const addimages = image => {
     const img = document.createElement("img")
-    img.src = './vysledky/vysledky1/' + image.src;
+    img.src = './vysledky/vysledky2/' + image.src;
     img.value = image.value;
     img.addEventListener("dragenter", function () {
         hoverOverElement = img.value

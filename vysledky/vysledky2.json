@@ -2,91 +2,91 @@
   "0": [
     {
       "src": "vysledok1-1.png",
-      "value": "8"
+      "value": "7"
     },
     {
       "src": "vysledok1-2.png",
-      "value": "2"
+      "value": "3"
     },
     {
       "src": "vysledok1-3.png",
-      "value": "4"
+      "value": "0"
     }
   ],
   "1": [
     {
       "src": "vysledok2-1.png",
-      "value": "71"
+      "value": "1/2"
     },
     {
       "src": "vysledok2-2.png",
-      "value": "17"
+      "value": "2/3"
     },
     {
       "src": "vysledok2-3.png",
-      "value": "28"
+      "value": "1"
     }
   ],
   "2": [
     {
       "src": "vysledok3-1.png",
-      "value": "275"
+      "value": "12"
     },
     {
       "src": "vysledok3-2.png",
-      "value": "15"
+      "value": "12/27"
     },
     {
       "src": "vysledok3-3.png",
-      "value": "24"
+      "value": "12/25"
     }
   ],
   "3": [
     {
       "src": "vysledok4-1.png",
-      "value": "0"
+      "value": "6"
     },
     {
       "src": "vysledok4-2.png",
-      "value": "24"
+      "value": "10"
     },
     {
       "src": "vysledok4-3.png",
-      "value": "0"
+      "value": "4"
     }
   ],
   "4": [
     {
       "src": "vysledok5-1.png",
-      "value": "0"
+      "value": "14"
     },
     {
       "src": "vysledok5-2.png",
-      "value": "0"
+      "value": "5"
     },
     {
       "src": "vysledok5-3.png",
-      "value": "3"
+      "value": "2"
     }
   ],
   "5": [
     {
       "src": "vysledok6-1.png",
-      "value": "0"
+      "value": "2"
     },
     {
       "src": "vysledok6-2.png",
-      "value": "12"
+      "value": "18"
     },
     {
       "src": "vysledok6-3.png",
-      "value": "0"
+      "value": "3"
     }
   ],
   "6": [
     {
       "src": "vysledok7-1.png",
-      "value": "23"
+      "value": "9"
     },
     {
       "src": "vysledok7-2.png",
@@ -94,49 +94,49 @@
     },
     {
       "src": "vysledok7-3.png",
-      "value": "0"
+      "value": "-4"
     }
   ],
   "7": [
     {
       "src": "vysledok8-1.png",
-      "value": "0"
+      "value": "15"
     },
     {
       "src": "vysledok8-2.png",
-      "value": "9"
+      "value": "8"
     },
     {
       "src": "vysledok8-3.png",
-      "value": "0"
+      "value": "1"
     }
   ],
   "8": [
     {
       "src": "vysledok9-1.png",
-      "value": "0"
+      "value": "2"
     },
     {
       "src": "vysledok9-2.png",
-      "value": "87"
+      "value": "4"
     },
     {
       "src": "vysledok9-3.png",
-      "value": "0"
+      "value": "3"
     }
   ],
   "9": [
     {
       "src": "vysledok10-1.png",
-      "value": "0"
+      "value": "45"
     },
     {
       "src": "vysledok10-2.png",
-      "value": "0"
+      "value": "7"
     },
     {
       "src": "vysledok10-3.png",
-      "value": "9"
+      "value": "32"
     }
   ]
 }
