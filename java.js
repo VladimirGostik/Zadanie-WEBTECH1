@@ -83,15 +83,7 @@ spat.addEventListener("click", function (){
     main1.style.display = "none"
     uvod.style.display = "flex"
 })
-popis.addEventListener("click", function (){
-    popis_hry.style.display = "flex"
-    uvod.style.visibility = "hidden"
-})
-spat_popis.addEventListener("click",  function (){
-    popis_hry.style.display = "none";
-    uvod.style.visibility = " visible";
-    priklad_vysledok.style.border =  "none"
-})
+
 
 
 

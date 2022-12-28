@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'custom_font';
     src: url(Poppins/Poppins-Light.ttf);
@@ -28,13 +27,28 @@ header > div {
     display: flex;
     justify-content: center;
 }
-#main1, #popis_hry  {
+#main1 {
     position: relative;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2%;
     background-color: #F1BB87;
     display: none;
+    width: 80%;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+}
+
+#popis_hry {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-bottom: 20px;
+    background-color: #F1BB87;
+    display: flex;
     width: 80%;
     height: auto;
     align-items: center;
@@ -49,6 +63,7 @@ header > div {
 }
 #popis_hry > div {
     display: flex;
+    z-index: 1;
     flex-direction: column;
     align-items: center;
     max-height: 60%;
@@ -96,7 +111,7 @@ header > div {
 .uvod > div {
     padding: 15px;
 }
-#start, #popis , #spat , #spat_popis , #znovu, #napoveda {
+#start, #popis_hry_button , #spat , #znovu, #napoveda {
     display: inline-block;
     padding: 10px 20px;
     font-size: 15px;
@@ -111,7 +126,22 @@ header > div {
     box-shadow: 0 7px rgb(241, 216, 186);
 }
 
-#start:hover, #popis:hover, #spat:hover, #spat_popis , #znovu, #napoveda {background-color:rgb(153, 89, 10)}
+#spat_popis{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(185, 145, 97);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 7px rgb(241, 216, 186);
+}
+
+#start:hover, #popis_hry_button:hover, #spat:hover, #spat_popis , #znovu, #napoveda {background-color:rgb(153, 89, 10)}
 
 #start:active, #popis:active, #spat:active ,#spat_popis , #znovu {
     background-color: rgb(185, 145, 97);
