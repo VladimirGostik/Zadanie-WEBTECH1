@@ -93,7 +93,6 @@ header > div {
     padding: 15px;
 }
 
-
 #box {
     width: 100px;
     height: 100px;
@@ -101,6 +100,7 @@ header > div {
     cursor: pointer;
     position: absolute;
 }
+
 .uvod {
     display: flex;
     flex-direction: column;
@@ -108,9 +108,11 @@ header > div {
     justify-content: flex-end;
     align-items: center;
 }
+
 .uvod > div {
     padding: 15px;
 }
+
 #start, #popis_hry_button , #spat , #znovu, #napoveda, #easy, #medium, #hard {
     display: inline-block;
     padding: 10px 20px;
@@ -142,7 +144,7 @@ header > div {
     box-shadow: 0 7px rgb(241, 216, 186);
 }
 
-#start:hover, #popis_hry_button:hover, #spat:hover, #spat_popis , #znovu, #napoveda, #easy:hover, #medium:hover, #hard:hover {background-color:rgb(153, 89, 10)}
+#start:hover, #popis_hry_button:hover, #spat:hover, #spat_popis , #znovu, #napoveda:hover, #easy:hover, #medium:hover, #hard:hover {background-color:rgb(153, 89, 10)}
 
 #start:active, #popis:active, #spat:active ,#spat_popis , #znovu, #easy:active, #medium:active, #hard:active {
     background-color: rgb(185, 145, 97);
@@ -156,7 +158,6 @@ header > div {
 }
 #hraciaplocha_spodok  > img {
     max-width: 80%;
-
 }
 
 #hraciaplocha_spodok_pomoc {
@@ -165,6 +166,7 @@ header > div {
     background-color: rgba(255, 201, 136, 0.544);
     color: rgb(0, 0, 0);
 }
+
 #hraciaplocha {
     width: 100%;
     height: auto;
@@ -179,15 +181,14 @@ header > div {
         height:  50px;
         width: 100px;
         max-width: 80%;
-
     }
 }
 #hraciaplocha > img {
     height:  100px;
     width: 100px;
     max-width: 80%;
-
 }
+
 #uplnyspodok {
     display: flex;
     width: 100%;
@@ -197,19 +198,23 @@ header > div {
     flex-wrap: wrap;
 
 }
+
 #ukoncenie {
     display: none;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 10%;
-    width: 60%;
-    height: 80%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 20%;
+    left: 10%;
+    width: 80%; /* Full width */
+    height: 80%; /* Full height */
     max-height: 550px;
     border: 2px solid;
-    background-color: #cccccc;
+    background-color: #F1BB87;
     justify-content: center;
 }
+
 body {
     font-family: 'custom_font';
     background-color: rgba(255, 201, 136, 0.544);
@@ -217,7 +222,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 
 #medium, #hard {
     display: none;

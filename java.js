@@ -18,6 +18,7 @@ const zivot = document.getElementById("zivot");
 const uroven = document.getElementById("level");
 const ukoncenie = document.getElementById("ukoncenie")
 const ukonceni_text = document.getElementById("ukoncenie_text")
+
 let pocet_zivotou = 3;
 let cyklus;
 let ktory = 0;
@@ -29,9 +30,9 @@ let vysledok_riesenia
 
 /****************************************************************************************************************************************************************************************************************************/
 
-//var diffLevel = 0;
-//var priklady = ["./priklady/priklady1.json", "./priklady/priklady2.json", "./priklady/priklady3.json",];
-//var vysledky = ["./vysledky/vysledky1.json", "./vysledky/vysledky2.json", "./vysledky/vysledky3.json"];
+var diffLevel = 0;
+var priklady_lvls = ['./priklady/priklady1.json','./priklady/priklady2.json', './priklady/priklady3.json',];
+var vysledky_lvls = ['./vysledky/vysledky1.json', './vysledky/vysledky2.json', './vysledky/vysledky3.json'];
 
 var priklady = "./priklady/priklady2.json";
 var vysledky = "./vysledky/vysledky2.json";
@@ -39,7 +40,6 @@ var vysledky = "./vysledky/vysledky2.json";
 /****************************************************************************************************************************************************************************************************************************/
 /* EASY   MEDIUM   HARD TLACIDLO
 /****************************************************************************************************************************************************************************************************************************/
-
 
 let selectedItem1 = document.getElementById('easy');
 let selectedItem2 = document.getElementById('medium');
@@ -54,17 +54,12 @@ function hide(name) {
 
 }
 
-
-
 selectedItem1.onclick = function () {
     diffLevel = 1;
     show('medium');
     hide('easy');
     hide('hard');
     hlavny_cyklus_hry();
-    
-
-
 }
 
 selectedItem2.onclick = function () {
@@ -110,6 +105,7 @@ function myFunc() {
         nums.splice(j, 1);
     }
 }
+
 spravne_riesenie.addEventListener("click", function () {
     fetch(priklady/*[diffLevel]*/)
         .then(res => res.json())
@@ -128,6 +124,7 @@ spravne_riesenie.addEventListener("click", function () {
             })
         })
 })
+
 document.getElementById("znovu").addEventListener("click", function () {
     main1.style.display = "none";
     ukoncenie.style.display = "none";
@@ -140,11 +137,11 @@ start.addEventListener("click", function () {
     main1.style.display = "flex"
     uvod.style.display = "none"
 })
+
 spat.addEventListener("click", function () {
     main1.style.display = "none"
     uvod.style.display = "flex"
 })
-
 
 
 function hlavny_cyklus_hry() {
@@ -157,6 +154,7 @@ function hlavny_cyklus_hry() {
     }
 
 }
+
 function ktory_level(level) {
     if (ktory === 10) {
         koniec = 0;
@@ -202,7 +200,7 @@ function ktory_level(level) {
                                 ukoncenie.style.display = "flex";
 
                             }
-                            zivot.innerText = "Zivot:" + --pocet_zivotou;
+                            zivot.innerText = "život:" + --pocet_zivotou;
                         }
                     })
                     img.addEventListener("touchstart", function () {
@@ -233,14 +231,12 @@ function ktory_level(level) {
                             pomoc.style.top = 0 + 'px';
                             thisItem.classList.add('active');
                         }, 100);
-
                     })
                     div_spodok.appendChild(img)
                 })
             })
     }
 }
-
 
 const addimages = image => {
     const img = document.createElement("img")
@@ -295,8 +291,3 @@ navigator.serviceWorker.register("./serviceworker.js")
     .catch(function () {
         // console.log("error aaaa",err)
     })
-
-
-
-
-
