@@ -131,6 +131,8 @@ document.getElementById("znovu").addEventListener("click", function () {
     uvod.style.display = "flex";
     div.innerHTML = "";
     div_spodok.innerHTML = "";
+    pocet_zivotou = 3;
+    zivot.innerText = "❤️❤️❤️";
 })
 
 start.addEventListener("click", function () {
@@ -161,9 +163,9 @@ function ktory_level(level) {
         ktory = 0;
         pocet_zivotou = 3;
         ukonceni_text.innerText = "Vyhral si Gratulujem"
-        uroven.innerText = "Level:" + ktory;
+        uroven.innerText = "Level: " + ktory;
         ukoncenie.style.display = "flex";
-        zivot.innerText = "Zivot:" + pocet_zivotou;
+        zivot.innerText = "❤️❤️❤️";
     }
     else {
         fetch(vysledky/*[diffLevel]*/)
@@ -185,7 +187,7 @@ function ktory_level(level) {
                             img.style.display = "none"
                             div.innerHTML = "";
                             hoverOverElement_obrazok.style.border = "thick solid green"
-                            uroven.innerText = "Level:" + ++ktory;
+                            uroven.innerText = "Level: " + ++ktory;
                             riesenie.innerText = "";
                             ktory_level(cyklus[ktory]);
 
@@ -195,12 +197,18 @@ function ktory_level(level) {
                                 koniec = 0;
                                 ktory = 0;
                                 pocet_zivotou = 4;
-                                uroven.innerText = "Level:" + ktory;
+                                uroven.innerText = "Level: " + ktory;
                                 ukonceni_text.innerText = "Prehral si"
                                 ukoncenie.style.display = "flex";
 
                             }
-                            zivot.innerText = "život:" + --pocet_zivotou;
+                            if(pocet_zivotou === 3){
+                                zivot.innerText = "❤️❤️";
+                                --pocet_zivotou;
+                            } else{
+                                zivot.innerText = "❤️";
+                                --pocet_zivotou;
+                            }
                         }
                     })
                     img.addEventListener("touchstart", function () {
@@ -252,7 +260,7 @@ const addimages = image => {
             hoverOverElement_obrazok.style.display = "none"
             img.style.display = "none"
             div.innerHTML = "";
-            uroven.innerText = "Level:" + ++ktory;
+            uroven.innerText = "Level: " + ++ktory;
             riesenie.innerText = "";
             ktory_level(cyklus[ktory]);
         }
@@ -261,12 +269,19 @@ const addimages = image => {
             if (pocet_zivotou <= 1) {
                 koniec = 0;
                 ktory = 0;
-                pocet_zivotou = 4;
+                pocet_zivotou = 3;
+                zivot.innerText = "❤️❤️❤️";
                 ukonceni_text.innerText = "Prehral si"
                 ukoncenie.style.display = "flex";
-                uroven.innerText = "Level:" + ktory;
+                uroven.innerText = "Level: " + ktory;
             }
-            zivot.innerText = "Zivot:" + --pocet_zivotou;
+            if(pocet_zivotou === 3){
+                zivot.innerText = "❤️❤️";
+                --pocet_zivotou;
+            } else{
+                zivot.innerText = "❤️";
+                --pocet_zivotou;
+            }
         }
     })
     div.appendChild(img)
