@@ -21,22 +21,83 @@ const ukonceni_text = document.getElementById("ukoncenie_text")
 let pocet_zivotou = 3;
 let cyklus;
 let ktory = 0;
-let koniec= 0;
-let menuEnterTimer, menuLeaveTimer ;
+let koniec = 0;
+let menuEnterTimer, menuLeaveTimer;
 let mojjson;
 let nums = [];
 let vysledok_riesenia
-fetch("./priklady.json")
+
+/****************************************************************************************************************************************************************************************************************************/
+
+//var diffLevel = 0;
+//var priklady = ["./priklady/priklady1.json", "./priklady/priklady2.json", "./priklady/priklady3.json",];
+//var vysledky = ["./vysledky/vysledky1.json", "./vysledky/vysledky2.json", "./vysledky/vysledky3.json"];
+
+var priklady = "./priklady/priklady2.json";
+var vysledky = "./vysledky/vysledky2.json";
+
+/****************************************************************************************************************************************************************************************************************************/
+/* EASY   MEDIUM   HARD TLACIDLO
+/****************************************************************************************************************************************************************************************************************************/
+
+
+let selectedItem1 = document.getElementById('easy');
+let selectedItem2 = document.getElementById('medium');
+let selectedItem3 = document.getElementById('hard');
+
+function show(name) {
+    document.getElementById(name).style.display = 'block';
+}
+
+function hide(name) {
+    document.getElementById(name).style.display = 'none';
+
+}
+
+
+
+selectedItem1.onclick = function () {
+    diffLevel = 1;
+    show('medium');
+    hide('easy');
+    hide('hard');
+    hlavny_cyklus_hry();
+    
+
+
+}
+
+selectedItem2.onclick = function () {
+    diffLevel = 2;
+    show('hard');
+    hide('medium');
+    hide('easy');
+    hlavny_cyklus_hry();
+}
+
+selectedItem3.onclick = function () {
+    diffLevel = 3;
+    show('easy');
+    hide('hard');
+    hide('medium');
+    hlavny_cyklus_hry();
+}
+/****************************************************************************************************************************************************************************************************************************/
+/* EASY!   MEDIUM!   HARD TLACIDLO!
+/****************************************************************************************************************************************************************************************************************************/
+
+
+fetch(priklady/*[diffLevel]*/)
     .then(response => response.json())
     .then(json => {
-        mojjson=(Object.keys(json).length)
-        for (let k=0; k < mojjson ; k++){
+        mojjson = (Object.keys(json).length)
+        for (let k = 0; k < mojjson; k++) {
             nums.push([k]);
         }
     })
 
-function myFunc(){
-    myFunc = function(){}; // kill it as soon as it was called
+function myFunc() {
+    myFunc = function () { }; // kill it as soon as it was called
     localStorage.removeItem(cyklus)
     cyklus = [];
 
@@ -49,27 +110,27 @@ function myFunc(){
         nums.splice(j, 1);
     }
 }
-spravne_riesenie.addEventListener("click", function (){
-    fetch("./priklady.json")
+spravne_riesenie.addEventListener("click", function () {
+    fetch(priklady/*[diffLevel]*/)
         .then(res => res.json())
         .then(data => {
             data[cyklus[ktory]].forEach(image => {
                 vysledok_riesenia = image.value;
             })
         })
-    fetch("./vysledky.json")
+    fetch(vysledky/*[diffLevel]*/)
         .then(res => res.json())
         .then(data => {
             data[cyklus[ktory]].forEach(image => {
-                if(image.value === vysledok_riesenia){
+                if (image.value === vysledok_riesenia) {
                     riesenie.innerText = vysledok_riesenia;
                 }
             })
         })
 })
-document.getElementById("znovu").addEventListener("click",function (){
+document.getElementById("znovu").addEventListener("click", function () {
     main1.style.display = "none";
-    ukoncenie.style.display ="none";
+    ukoncenie.style.display = "none";
     uvod.style.display = "flex";
     div.innerHTML = "";
     div_spodok.innerHTML = "";
@@ -79,28 +140,27 @@ start.addEventListener("click", function () {
     main1.style.display = "flex"
     uvod.style.display = "none"
 })
-spat.addEventListener("click", function (){
+spat.addEventListener("click", function () {
     main1.style.display = "none"
     uvod.style.display = "flex"
 })
 
 
 
-
-function hlavny_cyklus_hry(){
-    if(++koniec === 1){
+function hlavny_cyklus_hry() {
+    if (++koniec === 1) {
         myFunc();
         ktory_level(cyklus[ktory]);
     }
-    else{
+    else {
         return 0;
     }
 
 }
 function ktory_level(level) {
-    if(ktory===10){
-        koniec=0;
-        ktory=0;
+    if (ktory === 10) {
+        koniec = 0;
+        ktory = 0;
         pocet_zivotou = 3;
         ukonceni_text.innerText = "Vyhral si Gratulujem"
         uroven.innerText = "Level:" + ktory;
@@ -108,41 +168,41 @@ function ktory_level(level) {
         zivot.innerText = "Zivot:" + pocet_zivotou;
     }
     else {
-        fetch("./vysledky.json")
+        fetch(vysledky/*[diffLevel]*/)
             .then(res => res.json())
             .then(data => {
                 data[level]
                     .forEach(addimages)
             })
-        fetch("./priklady.json")
+        fetch(priklady/*[diffLevel]*/)
             .then(res => res.json())
             .then(data => {
                 data[level].forEach(image => {
                     const img = document.createElement("img");
-                    img.src = `./priklady/` + image.src;
+                    img.src = './priklady/priklady2/' + image.src;
                     img.value = image.value;
                     img.addEventListener("dragend", (event) => {
                         if (hoverOverElement === event.target.value) {
                             hoverOverElement_obrazok.style.display = "none"
                             img.style.display = "none"
                             div.innerHTML = "";
-                            hoverOverElement_obrazok.style.border =  "thick solid green"
+                            hoverOverElement_obrazok.style.border = "thick solid green"
                             uroven.innerText = "Level:" + ++ktory;
                             riesenie.innerText = "";
                             ktory_level(cyklus[ktory]);
 
                         } else {
-                            hoverOverElement_obrazok.style.border =  "medium solid red"
-                            if(pocet_zivotou <= 1){
-                                koniec=0;
-                                ktory =0;
-                                pocet_zivotou =4;
+                            hoverOverElement_obrazok.style.border = "medium solid red"
+                            if (pocet_zivotou <= 1) {
+                                koniec = 0;
+                                ktory = 0;
+                                pocet_zivotou = 4;
                                 uroven.innerText = "Level:" + ktory;
                                 ukonceni_text.innerText = "Prehral si"
                                 ukoncenie.style.display = "flex";
 
                             }
-                                zivot.innerText = "Zivot:" + --pocet_zivotou;
+                            zivot.innerText = "Zivot:" + --pocet_zivotou;
                         }
                     })
                     img.addEventListener("touchstart", function () {
@@ -150,29 +210,29 @@ function ktory_level(level) {
                         hoverOverElement_obrazok = img;
                         hoverOverElement_obrazok.style.border = "medium solid green"
                     })
-                    img.addEventListener('mouseenter',  function (){
+                    img.addEventListener('mouseenter', function () {
                         let thisItem = this;
                         clearTimeout(menuLeaveTimer);
                         thisItem.classList.remove('active');
-                        menuEnterTimer = setTimeout(function (){
+                        menuEnterTimer = setTimeout(function () {
                             pomoc.style.display = "block";
-                            pomoc.style.right =80 + '%';
+                            pomoc.style.right = 80 + '%';
                             pomoc.style.top = 40 + '%';
                             thisItem.classList.add('active');
-                        },500);
+                        }, 500);
 
                     })
 
-                    img.addEventListener('mouseleave', function (){
+                    img.addEventListener('mouseleave', function () {
                         let thisItem = this;
                         clearTimeout(menuEnterTimer);
                         thisItem.classList.remove('active');
-                        menuLeaveTimer = setTimeout(function (){
+                        menuLeaveTimer = setTimeout(function () {
                             pomoc.style.display = "none";
                             pomoc.style.right = 0 + 'px';
                             pomoc.style.top = 0 + 'px';
                             thisItem.classList.add('active');
-                        },100);
+                        }, 100);
 
                     })
                     div_spodok.appendChild(img)
@@ -184,15 +244,15 @@ function ktory_level(level) {
 
 const addimages = image => {
     const img = document.createElement("img")
-    img.src = `./vysledky/` + image.src;
-    img.value =  image.value;
+    img.src = './vysledky/vysledky2/' + image.src;
+    img.value = image.value;
     img.addEventListener("dragenter", function () {
-         hoverOverElement = img.value
-         hoverOverElement_obrazok = img;
+        hoverOverElement = img.value
+        hoverOverElement_obrazok = img;
     })
     img.addEventListener('touchend', e => {
         hoverOverElement_obrazok.style.border = "none"
-        if(hoverOverElement === e.target.value ) {
+        if (hoverOverElement === e.target.value) {
             hoverOverElement_obrazok.style.display = "none"
             img.style.display = "none"
             div.innerHTML = "";
@@ -200,38 +260,43 @@ const addimages = image => {
             riesenie.innerText = "";
             ktory_level(cyklus[ktory]);
         }
-        else{
-            e.target.style.border =  "medium solid red"
-            if(pocet_zivotou <= 1){
-                koniec=0;
-                ktory =0;
-                pocet_zivotou =4;
+        else {
+            e.target.style.border = "medium solid red"
+            if (pocet_zivotou <= 1) {
+                koniec = 0;
+                ktory = 0;
+                pocet_zivotou = 4;
                 ukonceni_text.innerText = "Prehral si"
                 ukoncenie.style.display = "flex";
                 uroven.innerText = "Level:" + ktory;
             }
-                zivot.innerText = "Zivot:" + --pocet_zivotou;
+            zivot.innerText = "Zivot:" + --pocet_zivotou;
         }
     })
     div.appendChild(img)
 }
-priklad_priklad.addEventListener("dragend",function (){
-    priklad_vysledok.style.border =  "medium solid green"
-} )
-priklad_vysledok.addEventListener("dragenter", function (){
+priklad_priklad.addEventListener("dragend", function () {
+    priklad_vysledok.style.border = "medium solid green"
+})
+priklad_vysledok.addEventListener("dragenter", function () {
 
 })
-priklad_priklad.addEventListener("touchend",function (){
+priklad_priklad.addEventListener("touchend", function () {
 
-} )
-priklad_vysledok.addEventListener("touchstart", function (){
-    priklad_vysledok.style.border =  "medium solid green"
+})
+priklad_vysledok.addEventListener("touchstart", function () {
+    priklad_vysledok.style.border = "medium solid green"
 })
 
 navigator.serviceWorker.register("./serviceworker.js")
-    .then(function (){
+    .then(function () {
         // console.log(reg)
     })
-    .catch(function (){
+    .catch(function () {
         // console.log("error aaaa",err)
     })
+
+
+
+
+

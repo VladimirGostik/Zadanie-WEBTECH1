@@ -104,14 +104,14 @@ header > div {
 .uvod {
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 300px;
     justify-content: flex-end;
     align-items: center;
 }
 .uvod > div {
     padding: 15px;
 }
-#start, #popis_hry_button , #spat , #znovu, #napoveda {
+#start, #popis_hry_button , #spat , #znovu, #napoveda, #easy, #medium, #hard {
     display: inline-block;
     padding: 10px 20px;
     font-size: 15px;
@@ -125,6 +125,7 @@ header > div {
     border-radius: 10px;
     box-shadow: 0 7px rgb(241, 216, 186);
 }
+
 
 #spat_popis{
     display: inline-block;
@@ -141,9 +142,9 @@ header > div {
     box-shadow: 0 7px rgb(241, 216, 186);
 }
 
-#start:hover, #popis_hry_button:hover, #spat:hover, #spat_popis , #znovu, #napoveda {background-color:rgb(153, 89, 10)}
+#start:hover, #popis_hry_button:hover, #spat:hover, #spat_popis , #znovu, #napoveda, #easy:hover, #medium:hover, #hard:hover {background-color:rgb(153, 89, 10)}
 
-#start:active, #popis:active, #spat:active ,#spat_popis , #znovu {
+#start:active, #popis:active, #spat:active ,#spat_popis , #znovu, #easy:active, #medium:active, #hard:active {
     background-color: rgb(185, 145, 97);
     box-shadow: 0 5px rgb(241, 216, 186);
     transform: translateY(4px);
@@ -217,3 +218,7 @@ body {
     align-items: center;
 }
 
+
+#medium, #hard {
+    display: none;
+}

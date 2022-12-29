@@ -1,0 +1,142 @@
+{
+  "0": [
+    {
+      "src": "vysledok1-1.png",
+      "value": "3"
+    },
+    {
+      "src": "vysledok1-2.png",
+      "value": "9(3x-5)^3"
+    },
+    {
+      "src": "vysledok1-3.png",
+      "value": "3(3x-5)"
+    }
+  ],
+  "1": [
+    {
+      "src": "vysledok2-1.png",
+      "value": "1"
+    },
+    {
+      "src": "vysledok2-2.png",
+      "value": "1/(ln(ln(x))ln(x)x)"
+    },
+    {
+      "src": "vysledok2-3.png",
+      "value": "1/ln(x)"
+    }
+  ],
+  "2": [
+    {
+      "src": "vysledok3-1.png",
+      "value": "1/ln(x)"
+    },
+    {
+      "src": "vysledok3-2.png",
+      "value": "ln(x)/x"
+    },
+    {
+      "src": "vysledok3-3.png",
+      "value": "(1-ln(x))/(x^2)"
+    }
+  ],
+  "3": [
+    {
+      "src": "vysledok4-1.png",
+      "value": "tan(x)"
+    },
+    {
+      "src": "vysledok4-2.png",
+      "value": "arctg(x)"
+    },
+    {
+      "src": "vysledok4-3.png",
+      "value": "sin/cos"
+    }
+  ],
+  "4": [
+    {
+      "src": "vysledok5-1.png",
+      "value": "1/7"
+    },
+    {
+      "src": "vysledok5-2.png",
+      "value": "3/4"
+    },
+    {
+      "src": "vysledok5-3.png",
+      "value": "inf"
+    }
+  ],
+  "5": [
+    {
+      "src": "vysledok6-1.png",
+      "value": "0"
+    },
+    {
+      "src": "vysledok6-2.png",
+      "value": "1"
+    },
+    {
+      "src": "vysledok6-3.png",
+      "value": "inf"
+    }
+  ],
+  "6": [
+    {
+      "src": "vysledok7-1.png",
+      "value": "5log"
+    },
+    {
+      "src": "vysledok7-2.png",
+      "value": "x^5"
+    },
+    {
+      "src": "vysledok7-3.png",
+      "value": "5x^2"
+    }
+  ],
+  "7": [
+    {
+      "src": "vysledok8-1.png",
+      "value": "6(x-1)"
+    },
+    {
+      "src": "vysledok8-2.png",
+      "value": "x^3"
+    },
+    {
+      "src": "vysledok8-3.png",
+      "value": "x^3-3x^2+3x+c"
+    }
+  ],
+  "8": [
+    {
+      "src": "vysledok9-1.png",
+      "value": "1"
+    },
+    {
+      "src": "vysledok9-2.png",
+      "value": "0"
+    },
+    {
+      "src": "vysledok9-3.png",
+      "value": "8"
+    }
+  ],
+  "9": [
+    {
+      "src": "vysledok10-1.png",
+      "value": "1"
+    },
+    {
+      "src": "vysledok10-2.png",
+      "value": "1/(2ln(2))"
+    },
+    {
+      "src": "vysledok10-3.png",
+      "value": "0"
+    }
+  ]
+}
