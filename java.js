@@ -29,12 +29,17 @@ let vysledok_riesenia
 
 /****************************************************************************************************************************************************************************************************************************/
 
-//var diffLevel = 0;
-//var priklady = ["./priklady/priklady1.json", "./priklady/priklady2.json", "./priklady/priklady3.json",];
-//var vysledky = ["./vysledky/vysledky1.json", "./vysledky/vysledky2.json", "./vysledky/vysledky3.json"];
+var diffLevel = 0;
+var priklady = ["./priklady/priklady1.json", "./priklady/priklady2.json", "./priklady/priklady3.json",];
+var vysledky = ["./vysledky/vysledky1.json", "./vysledky/vysledky2.json", "./vysledky/vysledky3.json"];
 
-var priklady = "./priklady/priklady2.json";
-var vysledky = "./vysledky/vysledky2.json";
+var prikladyy = [`./priklady/priklady1/`, `./priklady/priklady2/`, `./priklady/priklady3/`,];
+var vysledkyy = [`./vysledky/vysledky1/`, `./vysledky/vysledky2/`, `./vysledky/vysledky3/`];
+
+//var priklady = "./priklady/priklady1.json";
+//var vysledky = "./vysledky/vysledky1.json";
+//var prikladyy = './priklady/priklady1/';
+//var vysledkyy = './vysledky/vysledky1/';
 
 /****************************************************************************************************************************************************************************************************************************/
 /* EASY   MEDIUM   HARD TLACIDLO
@@ -61,40 +66,33 @@ selectedItem1.onclick = function () {
     show('medium');
     hide('easy');
     hide('hard');
-    hlavny_cyklus_hry();
-    
-
-
 }
 
 selectedItem2.onclick = function () {
     diffLevel = 2;
     show('hard');
     hide('medium');
-    hide('easy');
-    hlavny_cyklus_hry();
 }
 
 selectedItem3.onclick = function () {
-    diffLevel = 3;
+    diffLevel = 0;
     show('easy');
     hide('hard');
-    hide('medium');
-    hlavny_cyklus_hry();
 }
+
 /****************************************************************************************************************************************************************************************************************************/
 /* EASY!   MEDIUM!   HARD TLACIDLO!
 /****************************************************************************************************************************************************************************************************************************/
 
+    fetch(priklady[diffLevel])
+        .then(response => response.json())
+        .then(json => {
+            mojjson = (Object.keys(json).length)
+            for (let k = 0; k < mojjson; k++) {
+                nums.push([k]);
+            }
+        })
 
-fetch(priklady/*[diffLevel]*/)
-    .then(response => response.json())
-    .then(json => {
-        mojjson = (Object.keys(json).length)
-        for (let k = 0; k < mojjson; k++) {
-            nums.push([k]);
-        }
-    })
 
 function myFunc() {
     myFunc = function () { }; // kill it as soon as it was called
@@ -111,14 +109,14 @@ function myFunc() {
     }
 }
 spravne_riesenie.addEventListener("click", function () {
-    fetch(priklady/*[diffLevel]*/)
+    fetch(priklady[diffLevel])
         .then(res => res.json())
         .then(data => {
             data[cyklus[ktory]].forEach(image => {
                 vysledok_riesenia = image.value;
             })
         })
-    fetch(vysledky/*[diffLevel]*/)
+    fetch(vysledky[diffLevel])
         .then(res => res.json())
         .then(data => {
             data[cyklus[ktory]].forEach(image => {
@@ -177,18 +175,18 @@ function ktory_level(level) {
         zivot.innerText = "Zivot:" + pocet_zivotou;
     }
     else {
-        fetch(vysledky/*[diffLevel]*/)
+        fetch(vysledky[diffLevel])
             .then(res => res.json())
             .then(data => {
                 data[level]
                     .forEach(addimages)
             })
-        fetch(priklady/*[diffLevel]*/)
+        fetch(priklady[diffLevel])
             .then(res => res.json())
             .then(data => {
                 data[level].forEach(image => {
                     const img = document.createElement("img");
-                    img.src = './priklady/priklady2/' + image.src;
+                    img.src = prikladyy[diffLevel] + image.src;
                     img.value = image.value;
                     img.addEventListener("dragend", (event) => {
                         if (hoverOverElement === event.target.value) {
@@ -253,7 +251,7 @@ function ktory_level(level) {
 
 const addimages = image => {
     const img = document.createElement("img")
-    img.src = './vysledky/vysledky2/' + image.src;
+    img.src = vysledkyy[diffLevel] + image.src;
     img.value = image.value;
     img.addEventListener("dragenter", function () {
         hoverOverElement = img.value
