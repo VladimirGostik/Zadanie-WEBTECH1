@@ -1,11 +1,12 @@
 {
   "name": "Zábavná matematika",
-  "short_name": "BS35",
+  "short_name": "ZB",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#FFFBEB",
+  "background_color": "#F7EF99",
   "theme_color": "#F7EF99",
-  "start_url": "https://webte1.fei.stuba.sk/~xsochab/zaver/index.html",
+  "scope": "/",
+  "start_url": "https://webte1.fei.stuba.sk/~xgostik/zaver/index.html",
   "icons": [
         {
           "src": "assets/icons/icon-72x72.png",
