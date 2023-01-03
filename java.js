@@ -287,21 +287,6 @@ const addimages = image => {
     div.appendChild(img)
 }
 
-
-
-priklad_priklad.addEventListener("dragend", function () {
-    priklad_vysledok.style.border = "medium solid green"
-})
-priklad_vysledok.addEventListener("dragenter", function () {
-
-})
-priklad_priklad.addEventListener("touchend", function () {
-
-})
-priklad_vysledok.addEventListener("touchstart", function () {
-    priklad_vysledok.style.border = "medium solid green"
-})
-
 navigator.serviceWorker.register("./serviceworker.js")
     .then(function () {
         // console.log(reg)
