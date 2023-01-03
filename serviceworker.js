@@ -1,22 +1,34 @@
-let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', (e) =>{
-    e.preventDefault();
-    deferredPrompt = e;
-    btnAdd.style.display = 'block';
+// give your cache a name
+const cacheName = 'my-cache';
+
+// put the static assets and routes you want to cache here
+const filesToCache = [
+  '/',
+  '/about',
+  '/index.html',
+  '/pokyny.html',
+  '/styles.css',
+  '/java.js',
+];
+
+// the event handler for the activate event
+self.addEventListener('activate', e => self.clients.claim());
+
+// the event handler for the install event 
+// typically used to cache assets
+self.addEventListener('install', e => {
+  e.waitUntil(
+    caches.open(cacheName)
+    .then(cache => cache.addAll(filesToCache))
+  );
 });
 
-btnAdd.addEventListener('click', (e) => {
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
-        if(choiceResult.outcome === 'accepted'){
-            console.log('User accepted the A2HS prompt');
-        }
-        deferredPrompt = null;
-    })
+// the fetch event handler, to intercept requests and serve all 
+// static assets from the cache
+self.addEventListener('fetch', e => {
+  e.respondWith(
+    caches.match(e.request)
+    .then(response => response ? response : fetch(e.request))
+  )
 });
-
-window.addEventListener('appinstalled', (evt) => {
-    app.logEvent('a2hs', 'installed');
-})
-
